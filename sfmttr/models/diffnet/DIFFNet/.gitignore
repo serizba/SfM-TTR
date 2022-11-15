@@ -1,0 +1,4 @@
+__pycache__
+*.sw*
+splits/eigen/gt_depths.npz
+data_path
