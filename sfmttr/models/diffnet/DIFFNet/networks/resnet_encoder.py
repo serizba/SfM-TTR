@@ -6,7 +6,7 @@ import torch
 import torch.nn as nn
 import torchvision.models as models # a subpackage containing different models 
 import torch.utils.model_zoo as model_zoo#pretrained network
-from hr_layers import *
+from ..hr_layers import *
 
 class ResNetMultiImageInput(ResNet):
 #class ResNetMultiImageInput(models.ResNet):

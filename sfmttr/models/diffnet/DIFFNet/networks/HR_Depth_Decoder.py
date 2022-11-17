@@ -4,8 +4,8 @@ import numpy as np
 import torch
 import torch.nn as nn
 from collections import OrderedDict
-from hr_layers import *
-from layers import upsample
+from ..hr_layers import *
+from ..layers import upsample
 
 class HRDepthDecoder(nn.Module):
     def __init__(self, num_ch_enc, scales=range(4), num_output_channels=1, mobile_encoder=False):
