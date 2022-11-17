@@ -67,13 +67,23 @@ class ResnetEncoder(nn.Module):
                    101: models.resnet101,
                    152: models.resnet152}
 
+        weights = {18: models.ResNet18_Weights.DEFAULT,
+                   34: models.ResNet34_Weights.DEFAULT,
+                   50: models.ResNet50_Weights.DEFAULT,
+                   101: models.ResNet101_Weights.DEFAULT,
+                   152: models.ResNet152_Weights.DEFAULT}
+
         if num_layers not in resnets:
             raise ValueError("{} is not a valid number of resnet layers".format(num_layers))
 
         if num_input_images > 1:
             self.encoder = resnet_multiimage_input(num_layers, pretrained, num_input_images)
         else:
-            self.encoder = resnets[num_layers](pretrained)
+            # self.encoder = resnets[num_layers](pretrained)
+            if pretrained:
+                self.encoder = resnets[num_layers](weights=weights[num_layers])
+            else:
+                self.encoder = resnets[num_layers](weights=None)
 
         if num_layers > 34:
             self.num_ch_enc[1:] *= 4
