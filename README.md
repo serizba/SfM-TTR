@@ -7,6 +7,7 @@ Code for refining depth estimation networks using COLMAP reconstructions.
 Install required dependencies for SfM-TTR (for specific model dependencies check their corresponding repositories):
 ```python
 conda install pytorch==1.12 torchvision -c pytorch
+conda install -c conda-forge statsmodels matplotlib yacs
 conda install tqdm
 pip install pytorch-lightning
 ```
