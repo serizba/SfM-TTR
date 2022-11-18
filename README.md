@@ -13,7 +13,7 @@ pip install pytorch-lightning
 
 This code is provided with the nested repositories of [AdaBins](https://github.com/shariqfarooq123/AdaBins), [ManyDepth](https://github.com/nianticlabs/manydepth), [CADepth](https://github.com/kamiLight/CADepth-master) and [DIFFNet](https://github.com/brandleyzhou/DIFFNet). 
 
-Although the code for these models is included, you need to manually download the weights of the networks from their repos. Once downloaded, place them in `SfM-TTR/sfmttr/models/{model_name}/weights/`.
+We provide the weights of DIFFNet to quickly test our method. Although for the rest of the networks all code is included, you need to manually download their weights. Once downloaded, place them in `SfM-TTR/sfmttr/models/{model_name}/weights/`.
 
 ## Data
 
